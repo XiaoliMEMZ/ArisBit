@@ -19,7 +19,7 @@
   - 重写了PID电机控制部分，提升维护性。
   - 删减不需要的PWM舵机控制，改为IO操作。
 - **功能增强**:
-  - 新增按钮事件功能。
+  - 新增按钮事件功能
 
 
 ## 🚀 快速上手
@@ -29,9 +29,36 @@
 - **硬件**: Yahboom ROSMaster v3
 - **IDE**: Keil µVision 5
 
-### 烧录步骤
+### 串口绑定（必须）
 
-1. **克隆仓库**:
-   ```bash
-   git clone https://github.com/your-username/ArisBit-FW.git
-   cd ArisBit-FW
+1. **克隆仓库**
+
+2. **将arisbit.rules复制到树莓派/etc/udev/rules.d/目录下**
+
+3. **在树莓派控制台执行下列命令**
+
+```bash
+sudo chmod a+x /etc/udev/rules.d/arisbit.rules
+sudo udevadm trigger
+sudo service udev reload
+sudo service udev restart
+```
+
+4. **最后重新插拔主板**
+
+
+### 烧录教程
+
+> 目前仅在Windows平台FlyMCU软件上测试刷录成功，故展示本方法。其余刷录方式可自行研究。
+
+1. **克隆仓库**
+
+2. **打开FlyMCU.exe，并选择arisbit.hex作为固件文件**
+
+3. **MicroUSB连接主板到电脑，点击搜索串口，并选择对应的串口**
+
+4. **在底部配置选择「DTR的低电平复位，RTS高电平进BootLoader」**
+
+5. **进入主板刷录模式：先按住扩展板上的BOOT0键，再按一下RESET键，最后松开BOOT0键**
+
+6. **点击开始编程，等待编程完成**
