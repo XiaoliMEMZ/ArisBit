@@ -3,7 +3,7 @@
 <!-- 在这里可以添加一些徽章，例如构建状态、许可证等 -->
 [![LICENSE](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-> 一款为Yahboom ROSMaster v3下位板对于RCJ比赛场景深度优化的固件。
+> 一款为Yahboom ROSMaster v3下位板对于RCJ足球比赛场景深度优化的固件。
 
 此固件基于 Yahboom 官方固件进行了大量修改和功能增强，旨在提供更稳定、更强大、更易于扩展的底层控制体验。
 
